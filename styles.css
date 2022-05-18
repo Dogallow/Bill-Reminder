@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+form{
+    margin-bottom:30px;
+    background-color: white;
+    border: 1px solid black;
+}
+form button{
+    width:100%;
+}
+form legend{
+    justify-content: center;
+    text-align: center;
+}
+
+#title{
+
+}
+
+h1 {
+    color: black;
+}
+
+ul{
+    margin: 0 auto;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+    margin: 5px auto;
+    background-color: burlywood;
+}
