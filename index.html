@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./index.html" method="post">
+        <legend>Bills</legend>
+        <div>
+            <label>Input your Bill</label>
+            <input id="bill-name" type="text">
+        </div>
+        <div>
+            <label>Input your Bill Due Date</label>
+            <input id="bill-date" type="date" >
+        </div>
+        <div>
+            <button type="submit" id="submit-button">Submit</button>
+        </div>
+
+    </form>
+    <div>
+        <h1>Select Bills</h1>
+        <ul id="bill-list">
+
+        </ul>
+        <script src="./app.js"></script>
+    </div>
+</body>
+</html>
