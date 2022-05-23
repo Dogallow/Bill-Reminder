@@ -42,7 +42,7 @@ submitButton.addEventListener('click',(e)=>{
                 listedBills.removeChild(li)
 
                  billList.splice(i,i+1)
-                console.log(billList.splice(i,i+1))
+                console.log(billList.splice(i,1))
                 })
             }
 
