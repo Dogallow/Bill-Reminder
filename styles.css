@@ -1,9 +1,53 @@
 body{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    background-color: antiquewhite;
+}
+
+body header{
+  grid-column-start: 2;
+  margin: 0 auto;
+  font-size: 24px;
+  padding-bottom: 10px;
+
+}
+
+.form-container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: antiquewhite;
+    height: 800px
+}
+/* Nav menu */
+nav{
+    justify-content: flex-start;
+}
+
+#nav-menu__open{
+    background-color: antiquewhite;
+
+}
+#nav-menu__open li{
+    padding: 5px;
+}
+
+#nav-menu__open a{
+    transition: margin-left 1s linear;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+.nav-menu__closed a{
+    margin-left: -200px;
+
+}
+
+#hamburger-icon{
+    cursor: pointer;
 }
 
 form{
@@ -32,8 +76,19 @@ ul{
     padding: 0;
 }
 
-li{
+.form-container li{
     list-style-type: none;
     margin: 5px auto;
     background-color: burlywood;
+
+}
+
+
+/* ------------------------------------------- */
+/* This is my section for the home.html */
+
+.image1-container img{
+    height: 50px;
+    width: 100px;
+
 }

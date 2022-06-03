@@ -4,10 +4,16 @@ let billDate = document.getElementById('bill-date')
 let listedBills = document.getElementById('bill-list')
 let recurring = document.getElementById('recurring-bill')
 
+let navMenu=document.getElementById('nav-menu__open')
+let hamburgerIcon = document.getElementById('hamburger-icon')
+
+
+
 
 let billList= []
-window.addEventListener('click',()=>{
-    // console.log(billList)
+hamburgerIcon.addEventListener('click',()=>{
+    navMenu.classList.toggle('nav-menu__closed');
+    console.log('click')
 })
 
 submitButton.addEventListener('click',(e)=>{
@@ -28,10 +34,13 @@ submitButton.addEventListener('click',(e)=>{
 
                 let li = document.createElement('li');
                 let button = document.createElement('button');
-                button.innerText="Delete";
+                let editButton = document.createElement('button');
+                button.innerHTML="<i class='fa-solid fa-x'></i>";
+                editButton.innerHTML='<i class="fa-solid fa-file-pen"></i>';
 
-                li.innerHTML="<li>"+bill.billName+", "+ bill.billDate +". " + "Is this bill recurring?" + bill.recurring +"</li>";
+                li.innerHTML="<li>"+bill.billName+"<br> "+ bill.billDate +".<br> " + "Is this bill recurring?  " + bill.recurring +"</li>";
                 li.appendChild(button)
+                li.appendChild(editButton)
                 listedBills.appendChild(li);
 
 
@@ -44,6 +53,19 @@ submitButton.addEventListener('click',(e)=>{
                  billList.splice(i,i+1)
                 console.log(billList.splice(i,1))
                 })
+
+
+            editButton.addEventListener('click', ()=>{
+                //Need work modifying the array, so that the delete functionality works
+                console.log(billList, i)
+
+
+                 billList.splice(i,i+1)
+                console.log(billList.splice(i,1))
+                })
+
+
+
             }
 
 
@@ -60,6 +82,6 @@ submitButton.addEventListener('click',(e)=>{
 
 
 })
- function removeListItem(list, index){
-    console.log("this func")
- }
+//  function removeListItem(list, index){
+//     console.log("this func")
+//  }
