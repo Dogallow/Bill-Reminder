@@ -1,3 +1,4 @@
+
 let submitButton = document.getElementById('submit-button')
 let billName = document.getElementById('bill-name')
 let billDate = document.getElementById('bill-date')
@@ -6,18 +7,24 @@ let recurring = document.getElementById('recurring-bill')
 
 let navMenu=document.getElementById('nav-menu__open')
 let hamburgerIcon = document.getElementById('hamburger-icon')
+let formContainer = document.querySelector('.form-container')
 
 
 
 
-let billList= []
-hamburgerIcon.addEventListener('click',()=>{
-    navMenu.classList.toggle('nav-menu__closed');
+
+
+hamburgerIcon.addEventListener('click', ()=>{
     console.log('click')
+    navMenu.classList.toggle('nav-menu__closed');
 })
+
+
+
 
 submitButton.addEventListener('click',(e)=>{
     e.preventDefault()
+    console.log(e)
     // Need to implement some logic that checks whether that exact occurrence is still in the list because it submits two
     let bool = true
     for(let i=0; i<billList.length; i++){
@@ -82,6 +89,8 @@ submitButton.addEventListener('click',(e)=>{
 
 
 })
-//  function removeListItem(list, index){
-//     console.log("this func")
-//  }
+
+
+
+
+let billList= []
