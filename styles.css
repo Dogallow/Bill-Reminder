@@ -1,3 +1,8 @@
+:root{
+    --mainText: red;
+}
+
+
 body{
     display: grid;
     grid-template-columns: 100px 1fr;
@@ -23,6 +28,7 @@ body header{
 /* Nav menu */
 nav{
     justify-content: flex-start;
+    
 }
 
 #nav-menu__open{
@@ -86,5 +92,3 @@ ul{
 
 /* ------------------------------------------- */
 /* This is my section for the home.html */
-
-
